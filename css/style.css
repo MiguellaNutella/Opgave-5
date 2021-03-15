@@ -1,0 +1,139 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 62.5%;
+}
+section{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "nav"
+  "header"
+  "main"
+  "footer";
+}
+nav{
+  grid-area: nav;
+}
+nav a{
+  color: red;
+  text-decoration: none;
+  font-size: 2.0rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 5.5rem;
+  margin-left: 8rem;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+header{
+  grid-area: header;
+  height: 360px;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 
+  sans-serif;
+  padding-left: 9rem;
+}
+header h1{
+  padding-top: 10rem;
+  font-size: 4rem;
+  font-weight: normal;
+}
+header h2{
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+header img{
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  padding-top: 8.0rem;
+}
+main{
+  grid-area: main;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+article{
+  background-color: #621515;
+  padding-top: 6.3rem;
+  padding-left: 5.0rem;
+  padding-right: 6.5rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 
+  sans-serif;
+}
+article h3{
+  padding-bottom: 5.0rem;
+  font-size: 2.5rem;
+}
+article p{
+  padding-bottom: 7.0rem;
+  font-size: 1.5rem;
+}
+footer{
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 130px;
+  background-color: red;
+}
+footer img{
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  padding-top: 1.0rem;
+}
+footer h4{
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 
+  sans-serif;
+  text-align: center;
+  line-height: 13.0rem;
+  font-size: 2.0rem;
+}
+@media only screen and (max-width: 768px){
+  html{
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 550px){
+  html{
+    font-size: 50%;
+  }
+  section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "header";
+  }
+  main{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  footer{
+    display: none;
+  }
+  #box{
+    display: none;
+  }
+  header{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  header img{
+    width: 100px;
+    padding: 1.0rem;
+  }
+}
